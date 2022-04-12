@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --light: hsl(0, 0%, 98%);
+  --dark: hsl(207, 26%, 17%);
+  --dark-element: hsl(209, 23%, 22%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
+  /* text-align: center; */
+  font-family: 'Nunito Sans',
+    sans-serif;
   min-height: 100vh;
+}
+
+.dark {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.light {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.input {
+  margin: 40px 20px;
+  width: 30%;
+  position: relative;
+}
+
+.filter {
+  width: 20%;
+}
+
+.input a {
+  position: absolute;
+  top: 34%;
+  right: 5%;
+}
+
+.input-search,
+.input-filter {
+  padding: 15px;
+
+  border: none;
+  outline: none;
+  position: relative;
+  width: 100%;
+  /* width: 300px; */
+
+  border-radius: 5px;
+}
+
+select option {
+  padding: 10px !important;
+}
+
+.header-component {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.not-found {
+  font-size: 25px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 40px 0;
 }
 
-.App-link {
-  color: #61dafb;
+@media(max-width:900px) {
+  .input {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .filter {
+    width: 80%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-dark {
+  background-color: hsl(209, 23%, 22%);
+  box-shadow: -1px 3px 5px #161e25;
+  display: flex;
+  color: #ddd;
+}
+
+.input-light {
+  box-shadow: -1px 3px 5px #d3d3d3;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*Footer Style*/
+footer {
+  padding: 35px;
+}
+
+footer h4 {
+
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #898484;
+  /* border-top: 1px solid #ddd; */
+}
+
+footer a {
+  color: #898484;
 }

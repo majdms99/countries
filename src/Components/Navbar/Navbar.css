@@ -1,0 +1,38 @@
+nav {
+    height: 80px;
+    width: 100%;
+
+    display: flex;
+}
+
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+nav .icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+nav span {
+    margin-left: 4px;
+    font-weight: 600;
+}
+
+.nav-dark {
+    background-color: hsl(209, 23%, 22%);
+    box-shadow: -1px 3px 5px #161e25;
+    display: flex;
+}
+
+.nav-light {
+    box-shadow: -1px 3px 5px #d3d3d3;
+    background-color: hsl(0, 0%, 100%);
+}
